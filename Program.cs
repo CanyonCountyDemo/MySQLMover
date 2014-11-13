@@ -15,7 +15,8 @@ namespace MySQLMover
     {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new frmHomeAddress());
+      //Application.Run(new frmPollworkerPlain());
+      Application.Run(new frmPollworker());
     }
   }
 }

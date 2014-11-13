@@ -34,7 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.4.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>M:\CCReferences\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +50,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataMover\SQLServerOptions.PollworkerElectionXref.cs" />
+    <Compile Include="frmElection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmElection.Designer.cs">
+      <DependentUpon>frmElection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataMover\DataMover.cs" />
+    <Compile Include="DataMover\FieldMapping.cs" />
+    <Compile Include="DataMover\DBOptions.cs" />
+    <Compile Include="frmPollworker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPollworker.Designer.cs">
+      <DependentUpon>frmPollworker.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHomeAddress.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +77,12 @@
     </Compile>
     <Compile Include="frmHomes.Designer.cs">
       <DependentUpon>frmHomes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPollworkerPlain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPollworkerPlain.Designer.cs">
+      <DependentUpon>frmPollworkerPlain.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrevVoter.cs">
       <SubType>Form</SubType>
@@ -71,8 +96,23 @@
     <Compile Include="frmPrecinct.Designer.cs">
       <DependentUpon>frmPrecinct.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataMover\MySQLOptions.cs" />
+    <Compile Include="DataMover\InsertRow.cs" />
+    <Compile Include="Classes\Pollworker.cs" />
+    <Compile Include="Classes\PollworkerElectionXref.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataMover\SQLServerOptions.Base.cs" />
+    <Compile Include="DataMover\SQLServerOptions.Pollworker.cs" />
+    <EmbeddedResource Include="frmElection.resx">
+      <DependentUpon>frmElection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPollworker.resx">
+      <DependentUpon>frmPollworker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPollworkerPlain.resx">
+      <DependentUpon>frmPollworkerPlain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
